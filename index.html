@@ -4,8 +4,197 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>tasks</title>
+    <style>
+        html,body{
+            height: 100%;
+        }
+        body{
+            box-sizing: border-box;
+        }
+        .item{
+            margin-bottom: 10px;
+        }
+
+        .arrow{
+            margin-left: 20px;
+            margin-right: 20px;
+            
+        }
+
+        .block{
+            height: 100px;
+            background-color: orange;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+            border: 1px solid black;
+            flex: 0 0 100px;
+        }
+
+        .slider__wrapper{
+            width: 300px;
+            overflow:hidden;
+        }
+
+        .slider{
+            display:flex;
+            align-items: center;
+
+        }
+
+        .blocks{
+            display: flex;
+            position: relative;
+            right:0;
+            transition: .5s;
+        }
+
+        p{
+            text-align: center;
+        }
+        .btn{
+            margin: 0 auto;
+            width: 10%;
+        }
+        button{
+            display: inline-block;
+            width: 100px;
+            height: 50px;
+            background: blue;
+            color:#fff;
+            cursor: pointer;
+            /* border-radius: 3px;как это свойство задать бутону */
+        }
+
+        .modal{
+            position: fixed;
+            top: 0;
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: rgba(171, 164, 164, 0.3);
+            z-index: 10000;
+        }
+
+        .modal__content{
+            position: relative;
+            width: 41%;
+            border-radius: 7px;
+            background: black;
+            color :white;
+            padding: 10px 10px;
+        }
+
+        .cross{
+            position: absolute;
+            top: -12px;
+            right: -5px;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            text-align: center;
+            cursor: pointer;
+            background-color: red;
+            padding: 1px 1px;
+        }
+        .cross span:nth-child(1){
+            background: #fff;
+            transform: rotate(45deg);
+            width: 15px;
+            height: 3px;
+            position: absolute;
+            top:10px;
+            right: 3px;
+        }
+        .cross span:nth-child(2){
+            background: #fff;
+            transform: rotate(-45deg);
+            width: 15px;
+            height: 3px;
+            position: absolute;
+            top:10px;
+            right: 3px;
+        }
+        .hide{
+            display: none;
+        }
+
+        *{
+            box-sizing: border-box;
+        }
+    </style> 
 </head>
 <body>
+    <!-- <form id= "myForm">
+        <input type="text" id="phone">
+        <br>
+        <input type="text" name="name">
+        <br>
+        <input type="text" name="lastName">
+        <br>
+        <select name="gender">
+            <option value="m">М</option>
+            <option value="f">Ж</option>
+        </select>
+        <br>
+        <div>
+            <input type="checkbox" name="auto"> have car
+        </div>
+        <br>
+        <button id="sendButton">Send</button>
+        <br>
+        <br>
+    </form>
+    <input type="text" id="nameInput">
+        <button id="myButton">Add</button>
+
+        <ul id="list"></ul> -->
+
+
+     <!-- Слайдер -->
+
+    <div class="slider">
+        <a href="#" class="arrow arrow__left">←</a>
+       <div class="slider__wrapper">
+            <div class="blocks">
+                <div class="block block__first">1</div>
+                <div class="block block__two">2</div>
+                <div class="block block__third">3</div>
+                <div class="block block__fourth">4</div>
+                <div class="block block__fifth">5</div>
+                <div class="block block__six">6</div>
+                <div class="block block__seventh">7</div>
+                <div class="block block__eight">8</div>
+            </div>
+        </div>
+        <a href="#" class="arrow arrow__right">→</a>
+    </div>
+
+    <!-- Modal -->
+
+    <div class=" text">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis beatae soluta mollitia quas,<br>
+             ab quos pariatur porro distinctio eius quis ducimus illo ullam recusandae, veniam praesentium excepturi sunt corporis cupiditate.</p>
+        
+        <div class="btn">
+            <button class="btn__open">Open</button>
+        </div>
+    </div>
+
+    <!-- <div class="modal hide">
+        <div class="modal__content"> 
+            <div class="modal__text"></div>
+            <div class="cross">
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </div> -->
+    <script src="./example.js"></script>
+    <script src="./dom.js"></script>
     <script src="./main.js"></script>
-</body>
-</html>
+    <script src="./modal.js"></script>
+    </body>
